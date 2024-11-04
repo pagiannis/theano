@@ -55,8 +55,8 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button fx:id="button1" layoutX="266.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab1" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
-      <Button fx:id="button2" layoutX="307.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab2" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
-      <Button fx:id="button3" layoutX="348.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab3" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
+      <Button fx:id="button1" layoutX="269.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab1" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
+      <Button fx:id="button2" layoutX="315.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab2" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
+      <Button fx:id="button3" layoutX="362.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab3" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
     </children>
 </AnchorPane>
