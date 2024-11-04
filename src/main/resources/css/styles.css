@@ -1,0 +1,48 @@
+.tab-pane > .tab-header-area {
+    visibility: hidden;
+}
+
+.minimal-button {
+    -fx-background-color: #545050;
+    -fx-cursor: hand;
+}
+
+.minimal-button.selected-button {
+    -fx-background-color: #ded9d9;
+}
+
+/*
+.minimal-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+
+}
+
+.minimal-button:hover {
+    -fx-text-fill: gray;
+}
+
+.minimal-button:selected {
+    -fx-text-fill: red;
+}
+
+.tab-pane .tab {
+    -fx-pref-width: 200px;
+}
+
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-height: 4px;
+}
+
+.scroll-pane .scroll-bar:horizontal .increment-button,
+.scroll-pane .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: black;
+    -fx-background-radius: 10px;
+}*/

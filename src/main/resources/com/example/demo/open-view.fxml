@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" style="-fx-background-image: /Users/Giannes/IdeaProjects/theano/src/main/resources/photo-1519035350952-38d18a3848cf.jpeg; -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ReservationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" style="-fx-background-image: url(&quot;/Users/Giannes/IdeaProjects/theano/src/main/resources/photo-1519035350952-38d18a3848cf.jpeg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SwitchTabsController">
     <children>
       <ImageView fitHeight="594.0" fitWidth="664.0" opacity="0.91">
          <image>
@@ -19,14 +21,42 @@
             <Font name="Baskerville" size="48.0" />
          </font>
         </Text>
-        <Button layoutX="263.0" layoutY="291.0" mnemonicParsing="false" onAction="#onReservationButtonClick" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Reservation" textAlignment="CENTER">
-         <font>
-            <Font name="Baskerville" size="19.0" />
-         </font></Button>
-        <Text fx:id="textForButton" layoutX="209.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="243.21630859375">
-          <font>
-             <Font size="18.0" />
-          </font>
-        </Text>
+      <TabPane fx:id="tabPane" layoutX="77.0" layoutY="153.0" opacity="0.64" prefHeight="350.0" prefWidth="507.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tab1">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content></Tab>
+            <Tab text="Tab2">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                           <font>
+                              <Font name="Baskerville" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Tab3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                          <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                           <font>
+                              <Font name="Baskerville" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="button1" layoutX="266.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab1" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
+      <Button fx:id="button2" layoutX="307.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab2" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
+      <Button fx:id="button3" layoutX="348.0" layoutY="511.0" minHeight="0.0" mnemonicParsing="false" onAction="#switchToTab3" prefHeight="8.0" prefWidth="34.0" styleClass="minimal-button" />
     </children>
 </AnchorPane>
