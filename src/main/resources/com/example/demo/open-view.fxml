@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" style="-fx-background-image: url(&quot;/Users/Giannes/IdeaProjects/theano/src/main/resources/photo-1519035350952-38d18a3848cf.jpeg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SwitchTabsController">
     <children>
-      <ImageView fitHeight="594.0" fitWidth="664.0" opacity="0.91">
+      <ImageView fitHeight="594.0" fitWidth="664.0" opacity="0.9">
          <image>
             <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
          </image>
@@ -21,17 +21,24 @@
             <Font name="Baskerville" size="48.0" />
          </font>
         </Text>
-      <TabPane fx:id="tabPane" layoutX="77.0" layoutY="153.0" opacity="0.64" prefHeight="350.0" prefWidth="507.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPane" layoutX="77.0" layoutY="153.0" opacity="0.5" prefHeight="350.0" prefWidth="507.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Tab1">
                <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" text="Παραστάσεις">
+                           <font>
+                              <Font name="Baskerville" size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
                </content></Tab>
             <Tab text="Tab2">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                        <Button fx:id="kratisi1" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation1" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville" size="19.0" />
                            </font>
@@ -42,9 +49,9 @@
             </Tab>
           <Tab text="Tab3">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 6px;">
                      <children>
-                          <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                          <Button fx:id="kratisi2" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation2" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville" size="19.0" />
                            </font>
