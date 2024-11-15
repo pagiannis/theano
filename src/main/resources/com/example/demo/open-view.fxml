@@ -27,7 +27,7 @@
                <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" text="Παραστάσεις">
+                        <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" style="-fx-cursor: hand;" text="Παραστάσεις">
                            <font>
                               <Font name="Baskerville" size="18.0" />
                            </font>
@@ -38,7 +38,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="kratisi1" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation1" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                        <Button fx:id="kratisi1" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation1" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none; -fx-cursor: hand;" text="Κράτηση" textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville" size="19.0" />
                            </font>
@@ -51,7 +51,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 6px;">
                      <children>
-                          <Button fx:id="kratisi2" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation2" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none;" text="Κράτηση" textAlignment="CENTER">
+                          <Button fx:id="kratisi2" layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#openReservationFormPresentation2" prefHeight="41.0" prefWidth="140.0" style="-fx-border-style: none; -fx-cursor: hand;" text="Κράτηση" textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville" size="19.0" />
                            </font>

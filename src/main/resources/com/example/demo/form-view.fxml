@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -13,6 +19,109 @@
             <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
          </image>
       </ImageView>
-      <VBox layoutX="98.0" layoutY="49.0" opacity="0.51" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #ffffff; -fx-background-radius: 3px;" />
+      <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="49.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
+         <children>
+            <Label contentDisplay="RIGHT" text="Στοιχεία Κράτησης">
+               <font>
+                  <Font name="Baskerville SemiBold" size="26.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="286.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Όνομα:">
+                     <font>
+                        <Font name="Baskerville" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="437.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Επώνυμο:">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Baskerville" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="468.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Τηλέφωνο:">
+                     <font>
+                        <Font name="Baskerville" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="456.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Email:">
+                     <font>
+                        <Font name="Baskerville" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="464.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Αριθμός θέσεων:">
+                     <font>
+                        <Font name="Baskerville" size="16.0" />
+                     </font>
+                  </Label>
+                  <Spinner prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="462.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Παράσταση:">
+                     <font>
+                        <Font name="Baskerville" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+               </children>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-cursor: hand;" text="Κράτηση">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Baskerville" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="40.0" />
+         </padding></VBox>
    </children>
 </AnchorPane>
