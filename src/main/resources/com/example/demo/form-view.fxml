@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.FormController">
    <children>
       <ImageView fitHeight="594.0" fitWidth="664.0" opacity="0.9">
          <image>
@@ -33,7 +33,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="200.0">
+                  <TextField fx:id="firstNameInput" prefWidth="200.0">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -53,7 +53,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="200.0" />
+                  <TextField fx:id="lastNameInput" prefWidth="200.0" />
                </children>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -66,7 +66,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="200.0" />
+                  <TextField fx:id="phoneNumberInput" prefWidth="200.0" />
                </children>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -79,7 +79,7 @@
                         <Font name="Baskerville" size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="200.0" />
+                  <TextField fx:id="emailnput" prefWidth="200.0" />
                </children>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -92,7 +92,7 @@
                         <Font name="Baskerville" size="16.0" />
                      </font>
                   </Label>
-                  <Spinner prefWidth="200.0" />
+                  <Spinner fx:id="sheetsNumInput" prefWidth="200.0" />
                </children>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -105,13 +105,13 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+                  <TextField fx:id="PresentationInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
                </children>
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
             </HBox>
-            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-cursor: hand;" text="Κράτηση">
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-background-color: white; -fx-cursor: hand;" text="Κράτηση">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
