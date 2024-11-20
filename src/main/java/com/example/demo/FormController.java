@@ -1,15 +1,15 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class FormController {
-
-    private int i=1;
 
     @FXML
     private VBox formVBox; // The VBox containing your form
@@ -46,7 +46,7 @@ public class FormController {
         String lastName = lastNameInput.getText();
         String phone = phoneNumberInput.getText();
         String email = emailInput.getText();
-        Object sheetsNumber = sheetsNumInput.getValue();
+        int sheetsNumber = sheetsNumInput.getValue();
         String presentation = presentationInput.getText();
 
         // Clear the VBox to remove the form
@@ -54,33 +54,48 @@ public class FormController {
 
         // Add booking information into the VBox
         Label titleLabel = new Label("Επιβεβαίωση Κράτησης");
-        titleLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 26px; -fx-font-weight: Bold; -fx-padding: 10;");
+        titleLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 26px; -fx-font-weight: Bold; -fx-padding: 20;");
+        formVBox.getChildren().add(titleLabel);
 
-        Label firstNameLabel = new Label("Όνομα: " + firstName);
-        firstNameLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
+        // Create HBox for horizontal layout
+        HBox confirmationBox = new HBox(20); // Horizontal spacing of 20
+        confirmationBox.setAlignment(Pos.CENTER); // Center alignment
 
-        Label lastNameLabel = new Label("Επίθετο: "+lastName);
-        lastNameLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
+        // Create VBox for labels
+        VBox labelColumn = new VBox(10); // Vertical spacing of 10
+        labelColumn.setAlignment(Pos.CENTER_LEFT); // Align labels to the left
+        labelColumn.getChildren().addAll(
+                new Label("Όνομα:"),
+                new Label("Επώνυμο:"),
+                new Label("Τηλέφωνο:"),
+                new Label("Email:"),
+                new Label("Αριθμός θέσεων:"),
+                new Label("Παράσταση:")
+        );
+        labelColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 
-        Label phoneLabel = new Label("Τηλέφωνο: "+phone);
-        phoneLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
+        // Create VBox for values
+        VBox valueColumn = new VBox(10); // Vertical spacing of 10
+        valueColumn.setAlignment(Pos.CENTER_LEFT); // Align values to the left
+        valueColumn.getChildren().addAll(
+                new Label(firstName),
+                new Label(lastName),
+                new Label(phone),
+                new Label(email),
+                new Label(String.valueOf(sheetsNumber)),
+                new Label(presentation)
+        );
+        valueColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 
-        Label emailLabel = new Label("Email: "+email);
-        emailLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
+        // Add both VBoxes to the HBox
+        confirmationBox.getChildren().addAll(labelColumn, valueColumn);
 
-        Label sheetsNumberLabel = new Label("Αριθμός Θέσεων: "+sheetsNumber);
-        sheetsNumberLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
-
-        Label presentationLabel = new Label("Παράσταση: "+presentation);
-        presentationLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
-
-        Label indexLabel = new Label("Αριθμός Κράτησης: "+i);
-        indexLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
-        i+=1;
+        // Add the HBox to the main VBox
+        formVBox.getChildren().add(confirmationBox);
 
         Label thankyouLabel = new Label("Ευχαριστούμε");
-        thankyouLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 25px; -fx-padding: 30");
+        thankyouLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 25px; -fx-padding: 45");
 
-        formVBox.getChildren().addAll(titleLabel, firstNameLabel, lastNameLabel, phoneLabel, emailLabel, sheetsNumberLabel, presentationLabel, indexLabel, thankyouLabel);
+        formVBox.getChildren().add(thankyouLabel);
     }
 }
