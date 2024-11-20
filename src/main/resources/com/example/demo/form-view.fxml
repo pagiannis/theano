@@ -19,7 +19,7 @@
             <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
          </image>
       </ImageView>
-      <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="49.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
+      <VBox fx:id="formVBox" alignment="TOP_CENTER" layoutX="98.0" layoutY="49.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
          <children>
             <Label contentDisplay="RIGHT" text="Στοιχεία Κράτησης">
                <font>
@@ -79,7 +79,7 @@
                         <Font name="Baskerville" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="emailnput" prefWidth="200.0" />
+                  <TextField fx:id="emailInput" prefWidth="200.0" />
                </children>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -105,7 +105,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="PresentationInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+                  <TextField fx:id="presentationInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
                </children>
                <VBox.margin>
                   <Insets top="40.0" />
