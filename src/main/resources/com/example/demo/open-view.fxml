@@ -73,7 +73,12 @@
           </children>
       </AnchorPane>
        <AnchorPane fx:id="performancesView" visible="false">
-       
-       </AnchorPane>
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.9">
+               <image>
+                  <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </StackPane>
