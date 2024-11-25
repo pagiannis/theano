@@ -4,6 +4,7 @@ import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,8 +13,9 @@ public class OpenApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(OpenApplication.class.getResource("open-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("open-view.fxml"));
+        StackPane root = loader.load();
+        Scene scene = new Scene(root);
         stage.setTitle("Θέατρο Θεανώ");
         stage.setScene(scene);
 

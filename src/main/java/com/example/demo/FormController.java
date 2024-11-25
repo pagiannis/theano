@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 public class FormController {
 
     @FXML
-    private VBox formVBox; // The VBox containing your form
+    private VBox formVBox;
 
     @FXML
     private TextField firstNameInput;
@@ -31,7 +31,6 @@ public class FormController {
 
     @FXML
     public void initialize() {
-        // Set the range for the seatSpinner
         sheetsNumInput.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1));
     }
 
@@ -39,7 +38,6 @@ public class FormController {
     private TextField presentationInput;
 
 
-    // Method for submit button action
     @FXML
     private void handleSubmit() {
         String firstName = firstNameInput.getText();
@@ -49,21 +47,17 @@ public class FormController {
         int sheetsNumber = sheetsNumInput.getValue();
         String presentation = presentationInput.getText();
 
-        // Clear the VBox to remove the form
         formVBox.getChildren().clear();
 
-        // Add booking information into the VBox
         Label titleLabel = new Label("Επιβεβαίωση Κράτησης");
         titleLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 26px; -fx-font-weight: Bold; -fx-padding: 20;");
         formVBox.getChildren().add(titleLabel);
 
-        // Create HBox for horizontal layout
-        HBox confirmationBox = new HBox(20); // Horizontal spacing of 20
-        confirmationBox.setAlignment(Pos.CENTER); // Center alignment
+        HBox confirmationBox = new HBox(20);
+        confirmationBox.setAlignment(Pos.CENTER);
 
-        // Create VBox for labels
-        VBox labelColumn = new VBox(10); // Vertical spacing of 10
-        labelColumn.setAlignment(Pos.CENTER_LEFT); // Align labels to the left
+        VBox labelColumn = new VBox(10);
+        labelColumn.setAlignment(Pos.CENTER_LEFT);
         labelColumn.getChildren().addAll(
                 new Label("Όνομα:"),
                 new Label("Επώνυμο:"),
@@ -74,9 +68,8 @@ public class FormController {
         );
         labelColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 
-        // Create VBox for values
-        VBox valueColumn = new VBox(10); // Vertical spacing of 10
-        valueColumn.setAlignment(Pos.CENTER_LEFT); // Align values to the left
+        VBox valueColumn = new VBox(10);
+        valueColumn.setAlignment(Pos.CENTER_LEFT);
         valueColumn.getChildren().addAll(
                 new Label(firstName),
                 new Label(lastName),
@@ -87,14 +80,12 @@ public class FormController {
         );
         valueColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 
-        // Add both VBoxes to the HBox
         confirmationBox.getChildren().addAll(labelColumn, valueColumn);
 
-        // Add the HBox to the main VBox
         formVBox.getChildren().add(confirmationBox);
 
         Label thankyouLabel = new Label("Ευχαριστούμε");
-        thankyouLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 25px; -fx-padding: 45");
+        thankyouLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 25px; -fx-padding: 55");
 
         formVBox.getChildren().add(thankyouLabel);
     }

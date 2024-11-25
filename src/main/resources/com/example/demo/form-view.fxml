@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.FormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.FormController">
    <children>
-      <ImageView fitHeight="594.0" fitWidth="664.0" opacity="0.9">
+      <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.9">
          <image>
             <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
          </image>
       </ImageView>
-      <VBox fx:id="formVBox" alignment="TOP_CENTER" layoutX="98.0" layoutY="49.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
+      <VBox fx:id="formVBox" alignment="TOP_CENTER" layoutX="166.0" layoutY="52.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
          <children>
             <Label contentDisplay="RIGHT" text="Στοιχεία Κράτησης">
                <font>
