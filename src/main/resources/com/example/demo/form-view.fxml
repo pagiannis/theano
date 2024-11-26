@@ -19,7 +19,7 @@
             <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
          </image>
       </ImageView>
-      <VBox fx:id="formVBox" alignment="TOP_CENTER" layoutX="166.0" layoutY="52.0" opacity="0.91" prefHeight="496.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
+      <VBox fx:id="formVBox" alignment="TOP_CENTER" layoutX="166.0" layoutY="25.0" opacity="0.91" prefHeight="543.0" prefWidth="468.0" style="-fx-background-color: #CAB1AC; -fx-background-radius: 3px; -fx-spacing: 10px;">
          <children>
             <Label contentDisplay="RIGHT" text="Στοιχεία Κράτησης">
                <font>
@@ -111,13 +111,23 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </HBox>
-            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-cursor: HAND;" text="Κράτηση">
-               <VBox.margin>
-                  <Insets top="30.0" />
-               </VBox.margin>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="462.0">
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="120.0" text="Ημερομηνία:">
+                     <font>
+                        <Font name="Baskerville" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dateInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+               </children>
+            </HBox>
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-cursor: pointer;" text="Κράτηση">
                <font>
                   <Font name="Baskerville" size="16.0" />
                </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
             </Button>
          </children>
          <padding>

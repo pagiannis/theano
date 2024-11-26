@@ -37,6 +37,9 @@ public class FormController {
     @FXML
     private TextField presentationInput;
 
+    @FXML
+    private TextField dateInput;
+
 
     @FXML
     private void handleSubmit() {
@@ -46,6 +49,7 @@ public class FormController {
         String email = emailInput.getText();
         int sheetsNumber = sheetsNumInput.getValue();
         String presentation = presentationInput.getText();
+        String date = dateInput.getText();
 
         formVBox.getChildren().clear();
 
@@ -64,7 +68,8 @@ public class FormController {
                 new Label("Τηλέφωνο:"),
                 new Label("Email:"),
                 new Label("Αριθμός θέσεων:"),
-                new Label("Παράσταση:")
+                new Label("Παράσταση:"),
+                new Label("Ημερομηνία-Ώρα:")
         );
         labelColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 
@@ -76,7 +81,8 @@ public class FormController {
                 new Label(phone),
                 new Label(email),
                 new Label(String.valueOf(sheetsNumber)),
-                new Label(presentation)
+                new Label(presentation),
+                new Label(date)
         );
         valueColumn.setStyle("-fx-font-family: Baskerville; -fx-font-size: 18px;");
 

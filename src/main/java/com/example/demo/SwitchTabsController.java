@@ -48,6 +48,7 @@ public class SwitchTabsController {
             System.out.println("CSS file not found.");
         }
         formStage.show();
+
     }
 
     @FXML
