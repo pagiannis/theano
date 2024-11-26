@@ -83,9 +83,9 @@ public class SwitchTabsController {
     private void loadPerformances() {
         // Updated data structure without the image paths
         String[][] performances = {
-                {"Performance 1", "2024-12-01"},
-                {"Performance 2", "2024-12-05"},
-                {"Performance 3", "2024-12-10"}
+                {"Κοκκινοσκουφίτσα", "2024-12-01  18:00"},
+                {"Ο Πλούτος", "2024-12-05  21:20"},
+                {"Ηρακλής", "2024-12-10  19:00"}
         };
 
         for (int i = 0; i < performances.length; i++) {

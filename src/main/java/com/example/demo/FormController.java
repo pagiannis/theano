@@ -30,16 +30,17 @@ public class FormController {
     private Spinner<Integer> sheetsNumInput;
 
     @FXML
-    public void initialize() {
-        sheetsNumInput.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1));
-    }
-
-    @FXML
     private TextField presentationInput;
 
     @FXML
     private TextField dateInput;
 
+    @FXML
+    public void initialize() {
+        sheetsNumInput.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1));
+        presentationInput.setEditable(false);
+        dateInput.setEditable(false);
+    }
 
     @FXML
     private void handleSubmit() {
