@@ -15,6 +15,10 @@ public class OpenApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("open-view.fxml"));
         StackPane root = loader.load();
+
+        SwitchTabsController controller = loader.getController();
+        controller.setMainStage(stage);
+
         Scene scene = new Scene(root);
         stage.setTitle("Θέατρο Θεανώ");
         stage.setScene(scene);

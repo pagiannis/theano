@@ -25,6 +25,12 @@ public class SwitchTabsController {
     @FXML
     private GridPane performancesGrid;
 
+    private Stage mainStage;
+
+    public void setMainStage(Stage mainStage) {
+        this.mainStage = mainStage;
+    }
+
     @FXML
     public void initialize() {
         openView.setVisible(true);
@@ -34,6 +40,8 @@ public class SwitchTabsController {
 
     @FXML
     private void openReservationForm() throws IOException {
+        mainStage.hide();
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("form-view.fxml"));
         Scene formScene = new Scene(fxmlLoader.load());
 
@@ -47,6 +55,14 @@ public class SwitchTabsController {
         } else {
             System.out.println("CSS file not found.");
         }
+
+        formStage.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue) {
+                // If the form loses focus, show the main stage again
+                mainStage.show();
+            }
+        });
+
         formStage.show();
 
     }
@@ -89,7 +105,7 @@ public class SwitchTabsController {
         performancePane.setOnMouseExited(event -> performancePane.setStyle("-fx-background-color: #d3d3d3;"));
 
         VBox infoBox = new VBox();
-        infoBox.setSpacing(5); // Add spacing between the labels
+        infoBox.setSpacing(5);
         infoBox.setStyle("-fx-alignment: center;");
 
         javafx.scene.control.Label nameLabel = new javafx.scene.control.Label(name);
