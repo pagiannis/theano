@@ -123,7 +123,7 @@
             </HBox>
             <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-cursor: hand;" text="Κράτηση">
                <font>
-                  <Font name="Baskerville" size="16.0" />
+                  <Font name="Baskerville Bold" size="16.0" />
                </font>
                <VBox.margin>
                   <Insets top="30.0" />

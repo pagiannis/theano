@@ -34,9 +34,9 @@
                         <Image url="@../../../theatre1.png" />
                      </image>
                   </ImageView>
-                              <Button layoutX="148.0" layoutY="178.0" mnemonicParsing="false" onAction="#showPerformancesView" prefHeight="44.0" prefWidth="149.0" style="-fx-cursor: hand;" text="Παραστάσεις">
+                              <Button layoutX="141.0" layoutY="172.0" mnemonicParsing="false" onAction="#showPerformancesView" prefHeight="44.0" prefWidth="177.0" style="-fx-cursor: hand;" styleClass="performancesButton" text="Παραστάσεις">
                                  <font>
-                                    <Font name="Baskerville" size="18.0" />
+                                    <Font name="Baskerville Bold" size="18.0" />
                                  </font>
                               </Button>
                            </children>

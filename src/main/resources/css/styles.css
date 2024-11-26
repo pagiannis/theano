@@ -15,3 +15,13 @@
     -fx-background-color: #dedede;
     -fx-border-color: #dedede;
 }
+
+.text-field:focused {
+    -fx-border-color: #d6a1a1;
+    -fx-border-width: 2px;
+}
+
+.performancesButton{
+     -fx-font-size: 18px;
+     -fx-font-weight: bold;
+}

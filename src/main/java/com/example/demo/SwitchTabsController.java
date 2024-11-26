@@ -46,7 +46,7 @@ public class SwitchTabsController {
         Scene formScene = new Scene(fxmlLoader.load());
 
         FormController formController = fxmlLoader.getController();
-        formController.setPerformanceDetails(name, date);
+        formController.setPerformanceDetails(name, date);//Interact with Form Controller
 
         Stage formStage = new Stage();
         formStage.setTitle("Reservation Form");

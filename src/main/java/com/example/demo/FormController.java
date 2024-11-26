@@ -47,6 +47,7 @@ public class FormController {
         dateInput.setText(date);
     }
 
+
     @FXML
     private void handleSubmit() {
         String firstName = firstNameInput.getText();
