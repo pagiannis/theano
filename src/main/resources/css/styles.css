@@ -2,11 +2,16 @@
     visibility: hidden;
 }
 
-.minimal-button {
-    -fx-background-color: #664446;
-    -fx-cursor: hand;
-}
 
-.minimal-button.selected-button {
-    -fx-background-color: #ded9d9;
+.button {
+    -fx-font-family: "Baskerville";
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius:10px;
+    -fx-cursor: pointer;
+}
+.button:hover {
+    -fx-background-color: #dedede;
+    -fx-border-color: #dedede;
 }

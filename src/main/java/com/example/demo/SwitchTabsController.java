@@ -4,17 +4,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SwitchTabsController {
-
-    @FXML
-    private StackPane stackPane;
 
     @FXML
     private AnchorPane openView;
@@ -23,52 +23,14 @@ public class SwitchTabsController {
     private AnchorPane performancesView;
 
     @FXML
-    private TabPane tabPane;
-
-    @FXML
-    private Button button1, button2, button3;
+    private GridPane performancesGrid;
 
     @FXML
     public void initialize() {
         openView.setVisible(true);
         performancesView.setVisible(false);
-        setSelectedButton(button1);
     }
 
-
-    @FXML private void switchToTab1() {
-        tabPane.getSelectionModel().select(0);
-        setSelectedButton(button1);
-    }
-
-    @FXML
-    private void switchToTab2() {
-        tabPane.getSelectionModel().select(1);
-        setSelectedButton(button2);
-    }
-
-    @FXML
-    private void switchToTab3() {
-        tabPane.getSelectionModel().select(2);
-        setSelectedButton(button3);
-    }
-
-    private void setSelectedButton(Button selectedButton) {
-        button1.getStyleClass().remove("selected-button");
-        button2.getStyleClass().remove("selected-button");
-        button3.getStyleClass().remove("selected-button");
-        selectedButton.getStyleClass().add("selected-button");
-    }
-
-    @FXML
-    private void openReservationFormPresentation1() throws IOException {
-        openReservationForm();
-    }
-
-    @FXML
-    private void openReservationFormPresentation2() throws IOException {
-        openReservationForm();
-    }
 
     @FXML
     private void openReservationForm() throws IOException {
@@ -78,6 +40,13 @@ public class SwitchTabsController {
         Stage formStage = new Stage();
         formStage.setTitle("Reservation Form");
         formStage.setScene(formScene);
+
+        URL cssURL = getClass().getResource("/css/styles.css");
+        if (cssURL != null) {
+            formScene.getStylesheets().add(cssURL.toExternalForm());
+        } else {
+            System.out.println("CSS file not found.");
+        }
         formStage.show();
     }
 
@@ -85,6 +54,7 @@ public class SwitchTabsController {
     private void showPerformancesView() {
         openView.setVisible(false);
         performancesView.setVisible(true);
+        loadPerformances();
     }
 
     @FXML
@@ -92,4 +62,60 @@ public class SwitchTabsController {
         openView.setVisible(true);
         performancesView.setVisible(false);
     }
+
+    private void loadPerformances() {
+        // Updated data structure without the image paths
+        String[][] performances = {
+                {"Performance 1", "2024-12-01"},
+                {"Performance 2", "2024-12-05"},
+                {"Performance 3", "2024-12-10"}
+        };
+
+        for (int i = 0; i < performances.length; i++) {
+            addPerformanceToGrid(performances[i], i);
+        }
+    }
+
+
+    private void addPerformanceToGrid(String[] performanceData, int index) {
+        String name = performanceData[0];
+        String date = performanceData[1];
+
+        StackPane performancePane = new StackPane();
+        performancePane.setPrefSize(120, 120);
+        performancePane.setStyle("-fx-background-color: #d3d3d3; -fx-opacity:0.8;");
+        performancePane.setOnMouseEntered(event -> performancePane.setStyle("-fx-background-color: #bbbbbb;"));
+        performancePane.setOnMouseExited(event -> performancePane.setStyle("-fx-background-color: #d3d3d3;"));
+
+        VBox infoBox = new VBox();
+        infoBox.setSpacing(5); // Add spacing between the labels
+        infoBox.setStyle("-fx-alignment: center;");
+
+        javafx.scene.control.Label nameLabel = new javafx.scene.control.Label(name);
+        nameLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
+        javafx.scene.control.Label dateLabel = new javafx.scene.control.Label(date);
+        dateLabel.setStyle("-fx-font-size: 12px;");
+
+        infoBox.getChildren().addAll(nameLabel, dateLabel);
+
+        Button bookButton = new Button("κράτηση");
+        bookButton.setStyle("-fx-cursor: hand; -fx-opacity:1;");
+        bookButton.setOnAction(event -> {
+            try {
+                openReservationForm();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        Tooltip tooltip = new Tooltip(name + "\n" + date);
+        Tooltip.install(performancePane, tooltip);
+
+        performancePane.getChildren().addAll(infoBox, bookButton);
+
+        int row = index / 5; // 5 per row
+        int col = index % 5;
+        performancesGrid.add(performancePane, col, row);
+    }
+
 }

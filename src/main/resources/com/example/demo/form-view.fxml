@@ -111,7 +111,7 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </HBox>
-            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-background-color: white; -fx-cursor: hand;" text="Κράτηση">
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-cursor: HAND;" text="Κράτηση">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
