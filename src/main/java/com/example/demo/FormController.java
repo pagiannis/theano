@@ -42,6 +42,11 @@ public class FormController {
         dateInput.setEditable(false);
     }
 
+    public void setPerformanceDetails(String name, String date) {
+        presentationInput.setText(name);
+        dateInput.setText(date);
+    }
+
     @FXML
     private void handleSubmit() {
         String firstName = firstNameInput.getText();

@@ -39,11 +39,14 @@ public class SwitchTabsController {
 
 
     @FXML
-    private void openReservationForm() throws IOException {
+    private void openReservationForm(String name, String date) throws IOException {
         mainStage.hide();
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("form-view.fxml"));
         Scene formScene = new Scene(fxmlLoader.load());
+
+        FormController formController = fxmlLoader.getController();
+        formController.setPerformanceDetails(name, date);
 
         Stage formStage = new Stage();
         formStage.setTitle("Reservation Form");
@@ -119,7 +122,7 @@ public class SwitchTabsController {
         bookButton.setStyle("-fx-cursor: hand; -fx-opacity:1;");
         bookButton.setOnAction(event -> {
             try {
-                openReservationForm();
+                openReservationForm(name,date);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
