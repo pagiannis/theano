@@ -61,7 +61,6 @@ public class SwitchTabsController {
 
         formStage.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
-                // If the form loses focus, show the main stage again
                 mainStage.show();
             }
         });
@@ -86,9 +85,22 @@ public class SwitchTabsController {
     private void loadPerformances() {
         // Updated data structure without the image paths
         String[][] performances = {
-                {"Κοκκινοσκουφίτσα", "2024-12-01  18:00"},
-                {"Ο Πλούτος", "2024-12-05  21:20"},
-                {"Ηρακλής", "2024-12-10  19:00"}
+                {"Κοκκινοσκουφίτσα", "01-12-2024  18:00"},
+                {"Ο Πλούτος", "01-01-2024  21:20"},
+                {"Ηρακλής", "01-10-2024  19:00"},
+                {"Μήδεια", "05-12-2024  19:30"},
+                {"Ηλέκτρα", "11-12-2024  21:45"},
+                {"Η Τρικυμία", "11-12-2024  20:50"},
+                {"Το Καλοκαίρι του Φόβου", "13-12-2024  20:30"},
+                {"Λυσιστράτη", "13-12-2024  21:00"},
+                {"Το Παιχνίδι της Σφαγής", "13-12-2024  22:00"},
+                {"Η Αυλή των Θαυμάτων", "13-12-2024  21:00"},
+                {"Αντιγόνη", "15-12-2024  20:45"},
+                {"Ο Μικρός Πρίγκιπας", "15-11-2024  17:30"},
+                {"Η Χιονάτη και οι Επτά Νάνοι", "15-12-2024  17:20"},
+                {"Ένας Ήρωας με Παντόφλες", "18-12-2024  19:00"},
+                {"Ο Κουρέας της Σεβίλλης", "20-12-2024  20:20"},
+                {"Η Χώρα των Θαυμάτων", "21-12-2024  20:00"}
         };
 
         for (int i = 0; i < performances.length; i++) {
@@ -103,13 +115,13 @@ public class SwitchTabsController {
 
         StackPane performancePane = new StackPane();
         performancePane.setPrefSize(120, 120);
-        performancePane.setStyle("-fx-background-color: #d3d3d3; -fx-opacity:0.8;");
+        performancePane.setStyle("-fx-background-color: #d3d3d3; -fx-opacity:0.8; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 10;");
         performancePane.setOnMouseEntered(event -> performancePane.setStyle("-fx-background-color: #bbbbbb;"));
         performancePane.setOnMouseExited(event -> performancePane.setStyle("-fx-background-color: #d3d3d3;"));
 
         VBox infoBox = new VBox();
         infoBox.setSpacing(5);
-        infoBox.setStyle("-fx-alignment: center;");
+        infoBox.setStyle("-fx-alignment: center; -fx-spacing: 10;");
 
         javafx.scene.control.Label nameLabel = new javafx.scene.control.Label(name);
         nameLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
@@ -120,6 +132,7 @@ public class SwitchTabsController {
 
         Button bookButton = new Button("κράτηση");
         bookButton.setStyle("-fx-cursor: hand; -fx-opacity:1;");
+        bookButton.setStyle("-fx-background-color: #e63946; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10;");
         bookButton.setOnAction(event -> {
             try {
                 openReservationForm(name,date);
@@ -133,8 +146,8 @@ public class SwitchTabsController {
 
         performancePane.getChildren().addAll(infoBox, bookButton);
 
-        int row = index / 5; // 5 per row
-        int col = index % 5;
+        int row = index / 4; // 4 per row
+        int col = index % 4;
         performancesGrid.add(performancePane, col, row);
     }
 
