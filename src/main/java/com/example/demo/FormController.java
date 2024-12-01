@@ -2,10 +2,7 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -35,6 +32,9 @@ public class FormController {
     @FXML
     private TextField dateInput;
 
+    private boolean errorMessageDisplayed = false;
+
+
     @FXML
     public void initialize() {
         sheetsNumInput.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1));
@@ -57,6 +57,18 @@ public class FormController {
         int sheetsNumber = sheetsNumInput.getValue();
         String presentation = presentationInput.getText();
         String date = dateInput.getText();
+
+        if (firstName.isEmpty() || lastName.isEmpty() || phone.isEmpty() || email.isEmpty() || presentation.isEmpty() || date.isEmpty()) {
+            //Display error
+            if(errorMessageDisplayed){
+                return; //prevent adding duplicate error messages
+            }
+            Label errorLabel = new Label("Όλα τα πεδία είναι υποχρεωτικά!!!");
+            errorLabel.setStyle("-fx-font-family: Baskerville; -fx-font-size: 19px; -fx-padding: 8;");
+            formVBox.getChildren().add(errorLabel); //add the error message at the bottom
+            errorMessageDisplayed = true;
+            return;
+        }
 
         formVBox.getChildren().clear();
 
