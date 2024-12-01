@@ -126,7 +126,7 @@ public class SwitchTabsController {
         infoBox.getChildren().addAll(nameLabel, dateLabel);
 
         Button bookButton = new Button("κράτηση");
-        bookButton.setStyle("-fx-cursor: hand; -fx-background-color: #FC7E7E; -fx-text-fill: white; -fx-background-radius:10px; -fx-border-radius:10px; -fx-border-color: #FC7E7E;");
+        bookButton.getStyleClass().add("bookButton");
         bookButton.setOnAction(event -> {
             try {
                 openReservationForm(name,date);

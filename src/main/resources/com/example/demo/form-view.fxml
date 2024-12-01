@@ -105,7 +105,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="presentationInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+                  <TextField fx:id="presentationInput" prefWidth="200.0" style="-fx-background-color: #8A8181; -fx-text-fill: white;" />
                </children>
                <VBox.margin>
                   <Insets top="40.0" />
@@ -118,7 +118,7 @@
                         <Font name="Baskerville" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="dateInput" prefWidth="200.0" style="-fx-background-color: #8A8181;" />
+                  <TextField fx:id="dateInput" prefWidth="200.0" style="-fx-background-color: #8A8181; -fx-text-fill: white;" />
                </children>
             </HBox>
             <Button fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-cursor: hand;" text="Κράτηση">

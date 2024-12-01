@@ -34,3 +34,17 @@
     -fx-background-radius: 5;
     -fx-padding: 10;
 }
+
+.bookButton{
+    -fx-cursor: hand;
+    -fx-background-color: #FC7E7E;
+    -fx-text-fill: white;
+    -fx-background-radius:10px;
+    -fx-border-radius:10px;
+    -fx-border-color: #FC7E7E;
+}
+
+.bookButton:hover{
+    -fx-background-color: #E27A7A;
+    -fx-border-color: #E27A7A;
+}
