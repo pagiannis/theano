@@ -51,8 +51,8 @@
                   <Image url="@../../../photo-1519035350952-38d18a3848cf.jpeg" />
                </image>
             </ImageView>
-             <Button fx:id="backButton" layoutX="10" layoutY="10" onAction="#showMainMenu" style="-fx-cursor: hand;" text="Πίσω" />
-             <ScrollPane layoutX="50" layoutY="50" prefHeight="500" prefWidth="700" style="-fx-background-radius: 15px; -fx-opacity: 0.8;">
+             <Button fx:id="backButton" layoutX="10" layoutY="10" onAction="#showMainMenu" style="-fx-cursor: hand; -fx-opacity: 0.9;" text="Πίσω" />
+             <ScrollPane hbarPolicy="NEVER" layoutX="50" layoutY="50" prefHeight="500" prefWidth="700" style="-fx-background-radius: 15px; -fx-opacity: 0.9;">
                  <VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-radius: 15px;">
                      <GridPane fx:id="performancesGrid" hgap="20" style="-fx-background-radius: 10px;;" vgap="20">
                      <VBox.margin>

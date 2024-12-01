@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
@@ -114,14 +115,12 @@ public class SwitchTabsController {
         String date = performanceData[1];
 
         StackPane performancePane = new StackPane();
-        performancePane.setPrefSize(120, 120);
-        performancePane.setStyle("-fx-background-color: #d3d3d3; -fx-opacity:0.8; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 10;");
-        performancePane.setOnMouseEntered(event -> performancePane.setStyle("-fx-background-color: #bbbbbb;"));
-        performancePane.setOnMouseExited(event -> performancePane.setStyle("-fx-background-color: #d3d3d3;"));
+        performancePane.setPrefSize(140, 140);
+        performancePane.setStyle("-fx-background-color: #d3d3d3; -fx-background-radius: 5; -fx-border-radius: 5; -fx-padding: 5;");
 
         VBox infoBox = new VBox();
         infoBox.setSpacing(5);
-        infoBox.setStyle("-fx-alignment: center; -fx-spacing: 10;");
+        infoBox.setStyle("-fx-alignment: center;");
 
         javafx.scene.control.Label nameLabel = new javafx.scene.control.Label(name);
         nameLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
@@ -131,8 +130,7 @@ public class SwitchTabsController {
         infoBox.getChildren().addAll(nameLabel, dateLabel);
 
         Button bookButton = new Button("κράτηση");
-        bookButton.setStyle("-fx-cursor: hand; -fx-opacity:1;");
-        bookButton.setStyle("-fx-background-color: #e63946; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10;");
+        bookButton.setStyle("-fx-cursor: hand; -fx-background-color: #FC7E7E; -fx-text-fill: white; -fx-background-radius:10px; -fx-border-radius:10px; -fx-border-color: #FC7E7E;");
         bookButton.setOnAction(event -> {
             try {
                 openReservationForm(name,date);
@@ -141,10 +139,16 @@ public class SwitchTabsController {
             }
         });
 
+        VBox contentBox = new VBox();
+        contentBox.setSpacing(10);
+        contentBox.setAlignment(Pos.CENTER);
+
+        contentBox.getChildren().addAll(infoBox,bookButton);
+
         Tooltip tooltip = new Tooltip(name + "\n" + date);
         Tooltip.install(performancePane, tooltip);
 
-        performancePane.getChildren().addAll(infoBox, bookButton);
+        performancePane.getChildren().addAll(contentBox);
 
         int row = index / 4; // 4 per row
         int col = index % 4;
