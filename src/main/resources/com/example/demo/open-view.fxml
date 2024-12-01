@@ -52,11 +52,11 @@
                </image>
             </ImageView>
              <Button fx:id="backButton" layoutX="10" layoutY="10" onAction="#showMainMenu" style="-fx-cursor: hand; -fx-opacity: 0.9;" text="Πίσω" />
-             <ScrollPane hbarPolicy="NEVER" layoutX="50" layoutY="50" prefHeight="500" prefWidth="700" style="-fx-background-radius: 15px; -fx-opacity: 0.9;">
-                 <VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-radius: 15px;">
-                     <GridPane fx:id="performancesGrid" hgap="20" style="-fx-background-radius: 10px;;" vgap="20">
+             <ScrollPane hbarPolicy="NEVER" layoutX="50" layoutY="50" prefHeight="500" prefWidth="700" style="-fx-background-radius: 15px; -fx-opacity: 0.9;" vbarPolicy="NEVER">
+                 <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-radius: 15px;">
+                     <GridPane fx:id="performancesGrid" hgap="20.0" style="-fx-background-radius: 10px;;" vgap="20.0">
                      <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets left="20.0" right="20.0" />
                      </VBox.margin></GridPane>
                   <padding>
                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
