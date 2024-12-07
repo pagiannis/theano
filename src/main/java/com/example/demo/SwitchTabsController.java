@@ -60,11 +60,10 @@ public class SwitchTabsController {
             System.out.println("CSS file not found.");
         }
 
-        formStage.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) {
-                mainStage.show();
-            }
+        formStage.setOnHiding(event -> {
+            mainStage.show();
         });
+
 
         formStage.show();
 
